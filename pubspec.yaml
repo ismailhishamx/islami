@@ -11,7 +11,7 @@ environment:
 
 
 dependencies:
-
+  #// splash screen
   flutter_native_splash: ^2.4.8
 
   flutter:
