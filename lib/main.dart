@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:islami/splash_screen.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:islami/onboarding_screen.dart';
 
 import 'home/home_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: WidgetsFlutterBinding.ensureInitialized());
 
+  // your init code here (Firebase, etc.)
+
+  FlutterNativeSplash.remove(); // <-- this is what moves you to home
+  runApp(MyApp());
+}
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -20,9 +26,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      initialRoute: 'splashScreen',
+      initialRoute: 'onboardingScreen',
       routes: {
-        'splashScreen': (context) => SplashScreen(),
+        'onboardingScreen': (context) => OnboardingScreen(),
         'homeScreen': (context) => HomeScreen(),
       },
     );

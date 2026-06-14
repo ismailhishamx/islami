@@ -5,13 +5,31 @@ import 'package:flutter/widgets.dart';
 class Assets {
   Assets._();
 
+  static const $AssetsImagesGen images = $AssetsImagesGen();
+}
+
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  final $AssetsOnboardingGen onboarding = const $AssetsOnboardingGen();
+  final AssetGenImage splashScreen = const AssetGenImage('assets/images/Splash Screen.png');
+}
+
+class $AssetsOnboardingGen {
+  const $AssetsOnboardingGen();
+
+  final AssetGenImage header = const AssetGenImage('assets/images/onboarding/header.png');
+  final AssetGenImage onboarding1 = const AssetGenImage('assets/images/onboarding/onboarding1.png');
+  final AssetGenImage onboarding2 = const AssetGenImage('assets/images/onboarding/onboarding2.png');
+  final AssetGenImage onboarding3 = const AssetGenImage('assets/images/onboarding/onboarding3.png');
+  final AssetGenImage onboarding4 = const AssetGenImage('assets/images/onboarding/onboarding4.png');
+  final AssetGenImage onboarding5 = const AssetGenImage('assets/images/onboarding/onboarding5.png');
 }
 
 class AssetGenImage {
   const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
-
 
   final Size? size;
   final Set<String> flavors;
@@ -69,29 +87,15 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
-  Widget custom({
-    Key? key,
-    required Widget Function(BuildContext context, String assetPath) builder,
-  }) {
-    return Builder(
-      key: key,
-      builder: (context) => builder(context, _assetName),
-    );
+  Widget custom({Key? key, required Widget Function(BuildContext context, String assetPath) builder}) {
+    return Builder(key: key, builder: (context) => builder(context, _assetName));
   }
 
   String get path => _assetName;
 
   String get keyName => _assetName;
 }
-
