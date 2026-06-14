@@ -115,7 +115,7 @@ flutter_native_splash:
 
   # hide notif bar on android. ios already hides it by default.
   # Has no effect in web since web has no notification bar.
-  fullscreen: true                # default false
+  fullscreen: false                # default false
     # if you dont want to hide notif bar, for android just set this to false,
     # but for ios, add this to your flutter main():
     # WidgetsFlutterBinding.ensureInitialized();
@@ -146,6 +146,7 @@ flutter_native_splash:
     # without background: 1152×1152 px (fit within circle 768px in diameter)
     # ensure that the most important design elements of your image are placed within a circular area
     image: assets/images/Splash Screen.png
+    color: "#111821"
     # image_dark: assets/images/logo/logo-splash2.png
 
     # center-logo background color

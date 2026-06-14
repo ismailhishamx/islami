@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:islami/onboarding_screen.dart';
 
 import 'home/home_screen.dart';
 
@@ -25,8 +26,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      initialRoute: 'homeScreen',
+      initialRoute: 'onboardingScreen',
       routes: {
+        'onboardingScreen': (context) => OnboardingScreen(),
         'homeScreen': (context) => HomeScreen(),
       },
     );

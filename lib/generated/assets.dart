@@ -11,7 +11,19 @@ class Assets {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  final $AssetsOnboardingGen onboarding = const $AssetsOnboardingGen();
   final AssetGenImage splashScreen = const AssetGenImage('assets/images/Splash Screen.png');
+}
+
+class $AssetsOnboardingGen {
+  const $AssetsOnboardingGen();
+
+  final AssetGenImage header = const AssetGenImage('assets/images/onboarding/header.png');
+  final AssetGenImage onboarding1 = const AssetGenImage('assets/images/onboarding/onboarding1.png');
+  final AssetGenImage onboarding2 = const AssetGenImage('assets/images/onboarding/onboarding2.png');
+  final AssetGenImage onboarding3 = const AssetGenImage('assets/images/onboarding/onboarding3.png');
+  final AssetGenImage onboarding4 = const AssetGenImage('assets/images/onboarding/onboarding4.png');
+  final AssetGenImage onboarding5 = const AssetGenImage('assets/images/onboarding/onboarding5.png');
 }
 
 class AssetGenImage {
