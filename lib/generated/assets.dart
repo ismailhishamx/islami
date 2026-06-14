@@ -12,6 +12,7 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   final $AssetsOnboardingGen onboarding = const $AssetsOnboardingGen();
+  final AssetGenImage background = const AssetGenImage('assets/images/Background.png');
   final AssetGenImage splashScreen = const AssetGenImage('assets/images/Splash Screen.png');
 }
 
